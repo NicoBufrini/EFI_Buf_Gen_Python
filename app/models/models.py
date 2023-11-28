@@ -2,7 +2,7 @@ from app import db
 from sqlalchemy import ForeignKey
 from datetime import datetime
 
-class User(db.Model):
+class Usuario(db.Model):
     __tablename__ = 'user'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -12,7 +12,7 @@ class User(db.Model):
     posts = db.relationship('Post')
     coments = db.relationship('Coment')
 
-class Post(db.Model):
+class Publicacion(db.Model):
     __tablename__ = 'post'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -32,7 +32,7 @@ class Post(db.Model):
     user_obj = db.relationship('User')
     category_obj = db.relationship('Category')
 
-class Coment(db.Model):
+class Comentario(db.Model):
     __tablename__ = 'coment'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -51,7 +51,7 @@ class Coment(db.Model):
     user_obj = db.relationship('User')
     post_obj = db.relationship('Post')
 
-class Category(db.Model):
+class Categoria(db.Model):
     __tablename__="category"
 
     id = db.Column(db.Integer, primary_key=True)

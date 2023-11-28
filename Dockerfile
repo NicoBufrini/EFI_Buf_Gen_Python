@@ -2,8 +2,8 @@
 FROM python:3.9-alpine
 
 #Copia el directorio del contenedor.
-COPY . /EFI_Buf_Gen
-WORKDIR /EFI_Buf_Gen
+COPY . /EFI_Buf_Gen_Python
+WORKDIR /EFI_Buf_Gen_Python
 
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt

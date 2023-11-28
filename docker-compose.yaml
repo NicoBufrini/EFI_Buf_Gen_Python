@@ -27,7 +27,7 @@ services:
       - "5005:5005" # puerto que expone el contenedor : puerto del host donde escuchamos.
     # restart: always # En caso de error, reintenta.
     volumes:
-      - .:/EFI_Buf_Gen
+      - .:/EFI_Buf_Gen_Python
     env_file:
       - .env
     depends_on:
